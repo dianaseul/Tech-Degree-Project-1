@@ -7,25 +7,25 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: rgb(242,242,242);
 }
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color: #fff;
 }
 a:hover {
-  color: #6633ff;
+  color: rgb(199,151,133);
 }
 
 /* Section Styles */
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: rgb(108,129,154);
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -34,7 +34,7 @@ a:hover {
 .nav {
   display: flex;
   justify-content: space-around;
-  font-weight: 700;
+  font-weight: 500;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -52,12 +52,12 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: rgb(199,151,133)
 }
 
 header {
   text-align: center;
-background: url('images/background.png') no-repeat top center ;
+  background: url('images/background.png') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -77,29 +77,30 @@ header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
 .tag {
-  background-color: #efefef;
-  color: black;
+  background: rgb(242,242,242);
+  color: rgb(49,65,94);
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
 } 
 .location {
-  background-color: #222;
-  color: yellow;
+  background: rgb(242,242,242);
+  color: rgb(49,65,94);
 }
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
+  font-weight: 200;
   background: #fff;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: rgb(224,153,164);
 }
 
 ul.skills {
@@ -110,14 +111,14 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
-  color: white;
+  background: rgb(154,157,170);
+  color: rgb(49,65,94);
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: rgb(199,151,133);
 }
 
 footer {
@@ -167,6 +168,33 @@ a.social:hover {
   clear: both;
 }
 
+/* Inspirations Page */
+
+.main-insp {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 10px;
+  padding-top: 70px;
+  max-width: 1200px;
+}
+
+.main-insp .insp-photo {
+ width: 100%;
+}
+
+.main-insp img {
+ width: calc(100% - (10px * 2));
+ margin: 20px 20px 0;
+}
+
+/* Contact Page */
+
+.contact-pg {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 70px;
+  color: rgb(49,65,94);
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   
@@ -202,6 +230,10 @@ a.social:hover {
     max-width: 1200px;
     margin: 40px auto;
   }
+
+  .main-insp .insp-photo {
+    width: 50%;
+   }
 
 }
 
