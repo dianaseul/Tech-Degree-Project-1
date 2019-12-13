@@ -6,35 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
 
-  <div class="main-nav">
-      <ul class="nav">
-        <li class="name">Diana Gault-Williams</li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="inspirations.html">Inspirations</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-  </div>
+  <nav class="main-nav">
+    <ul class="nav">
+      <li class="name">Diana Gault-Williams</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="inspirations.html">Inspirations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <header>
-    <img src="images/myprofile.jpg" alt="Diana's profile picture" class="profile-image">
+    <div class="profile-image">
+      <img src="images/myprofile.jpg" alt="Diana's profile picture">
+    </div>
     <h1 class="tag name">Hello, I'm Diana.</h1>
-    <p class="tag location">My home is in California.</p>
+      <p class="tag location">My home is in California.</p>
   </header>
 
   <main class="flex">
-    <div class="card">
-      <h2>Background</h2>
-      <p>I am a Treehouse Techdegree student on the Front End Web Development path.</p>
-      <p>I love browsing the web and coming across beautiful & intuitive websites, so am looking forward to learning to building some of my own!</p>
-    </div> 
+    <section class="card">
+      <img src="images/coffeebooks.jpg" alt="Coffee and books" class="card-img">
+      <h2>About Me</h2>
+        <p>I'm an aspiring Front End Developer from sunny California. I'm currently a Treehouse Techdegree student on the Front End Web Development path.</p>
+        <p>When I'm not studying you'll find me somewhere in the outdoors with my husband, our 2 pups, and 2 adventurous kids!</p>
+        <p>In my free time, some of my hobbies include:</p>
+      <ul>
+        <li>Hiking</li>
+        <li>Traveling</li>
+        <li>Reading</li>
+      </ul>
+    </section> 
 
-    <div class="card">
+    <section class="card">
+      <img src="images/workdesk.jpg" alt="Desk with laptop" class="card-img">
       <h2>Goals</h2>
-      <p>I'm working to further my knowledge in the following languages: </p>
+        <p>My goal is to work collaboratively with clients to build creative websites that fit their needs. I'm currently working to further my knowledge in the following languages: </p>
       <ul class="skills">
         <li>HTML</li>
         <li>CSS</li>
@@ -42,15 +52,16 @@
         <li>Ruby</li>
         <li>Rails</li>
       </ul>
-      <p>My goal is to work collaboratively with clients to build websites to fit their needs. </p>
-    </div> 
-
+        <p>I love browsing the web and coming across beautiful & intuitive websites, so am looking forward to learning to build some of my own!</p>
+    </section> 
   </main>
+
   <footer>
     <ul>
       <li><a href="https://github.com/dianaseul" target="blank" class="social github">Github</a></li>
     </ul>
-    <p class="copyright">&copy;2019, Diana Gault-Williams</p>
+      <p class="copyright">&copy;2019, Diana Gault-Williams</p>
   </footer>
+  
 </body>
 </html>

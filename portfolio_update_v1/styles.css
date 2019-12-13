@@ -8,7 +8,7 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  color: #222;
+  color: rgb(49,65,94);
   background: rgb(242,242,242);
 }
 /* Link Styles */
@@ -52,7 +52,7 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: rgb(199,151,133)
+  color: rgb(199,151,133);
 }
 
 header {
@@ -66,16 +66,120 @@ header {
   line-height: 1.5;
 }
 header .profile-image {
-  margin-top: 50px;
+  position: relative;
+  margin: 50px auto 0;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 3px solid white;
-  transition: all .5s;
+  transition: 1s all;
 }
+
+header .profile-image img {
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(7deg);
 }
+
+header .profile-image:hover:before, header .profile-image:hover:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgb(224,153,164);
+  border-radius: 75px;
+  animation: 1s clockwise infinite;
+}
+
+header .profile-image:hover:after {
+  background: rgb(49,65,94);
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+}
+
 .tag {
   background: rgb(242,242,242);
   color: rgb(49,65,94);
@@ -88,12 +192,25 @@ header .profile-image:hover {
   background: rgb(242,242,242);
   color: rgb(49,65,94);
 }
+
+.card-img {
+  margin: auto;
+  padding: 10px;
+  max-width: 425px;
+  border-radius: 6px;
+}
+
+.card h2 {
+  text-align: center;
+  }
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
   font-weight: 200;
+  color: rgb(49,65,94);
   background: #fff;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
@@ -130,6 +247,7 @@ footer {
 footer .copyright {
   top: -8px;
   font-size: .75em;
+  color: rgb(49,65,94);
 }
 
 footer ul {
@@ -152,12 +270,7 @@ a.social {
   opacity: .4;
   transition: all .5s;
 }
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
+
 a.github {
   background-image: url(images/github.svg);
 }
@@ -170,11 +283,37 @@ a.social:hover {
 
 /* Inspirations Page */
 
+.insp-top {
+  padding-top: 70px;
+}
+
+.insp-top h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.insp-desc {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 5px 20px;
+  width: 500px;
+  letter-spacing: 1px;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+
+.insp-desc:hover {
+  border-color: rgb(224,153,164);
+}
+
 .main-insp {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto 10px;
-  padding-top: 70px;
   max-width: 1200px;
 }
 
@@ -190,9 +329,47 @@ a.social:hover {
 /* Contact Page */
 
 .contact-pg {
-  font-family: 'Montserrat', sans-serif;
   padding-top: 70px;
-  color: rgb(49,65,94);
+}
+
+.contact-pg img {
+  position: relative;
+  margin: 50px auto 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.contact-pg p {
+  margin: 10px;
+}
+
+.contact-info {
+  margin: 50px auto;
+  padding-top: 10px;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  letter-spacing: 1px;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+
+.contact-info:hover {
+  border-color: rgb(224,153,164);
+}
+
+.contact-info p {
+  margin: 10px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.contact-info a {
+  color: rgb(224,153,164);
 }
 
 /* Styles for larger screens */
