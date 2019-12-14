@@ -323,7 +323,8 @@ a.social:hover {
 
 .main-insp img {
  width: calc(100% - (10px * 2));
- margin: 20px 20px 0;
+ margin: 20px auto;
+ border-radius: 6px;
 }
 
 /* Contact Page */
