@@ -196,7 +196,7 @@ header .profile-image:hover:after {
 .card-img {
   margin: auto;
   padding: 10px;
-  max-width: 425px;
+  width: 100%;
   border-radius: 6px;
 }
 
@@ -205,7 +205,7 @@ header .profile-image:hover:after {
   }
 
 .card {
-  margin: 30px;
+  margin: 30px auto;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
@@ -295,7 +295,7 @@ a.social:hover {
 .insp-desc {
   margin: 0 auto;
   text-align: left;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
   padding: 5px 20px;
   width: 500px;
@@ -400,6 +400,10 @@ a.social:hover {
 
   main p {
     line-height: 1.6em;
+  }
+
+  .card {
+    margin: 30px;
   }
 
   footer {
